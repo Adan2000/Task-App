@@ -1,9 +1,6 @@
 const chalk = require('chalk')
-const func = require('./notes.js')
 const yargs = require('yargs')
-const { describe } = require('yargs')
-
-//customize yarg version
+const notes = require('./notes.js')
 
 yargs.version('1.1.0')
 
@@ -26,8 +23,7 @@ yargs.command({
         }
     },
     handler: function (argv) {
-        console.log('Title: ' + argv.title)
-        console.log('Body: ' + argv.body)
+        notes.addNote(argv.title, argv.body)
     }
 })
 //Create remove command
@@ -57,24 +53,3 @@ yargs.command ({
 
 yargs.parse()
 
-
-
-
-
-// const message = func()
-// console.log(message)
-
-// const blueMsg = chalk.bold.inverse.blue('Success!')
-// console.log(blueMsg)
-
-
-// console.log(process.argv[2])
-
-// const command = process.argv
-
-
-// if (command === 'add') {
-//     console.log('adding note!')
-// } else if (command === 'remove') {
-//     console.log('removing note!')
-// }
