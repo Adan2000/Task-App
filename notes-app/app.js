@@ -26,14 +26,23 @@ yargs.command({
         notes.addNote(argv.title, argv.body)
     }
 })
+
 //Create remove command
 yargs.command({
     command: 'remove',
     describe: 'Remove a note',
-    handler: function () {
-        console.log('Removing the note')
+    builder: {
+        title: {
+            describe: 'Note title', 
+            demandOption: true, 
+            type: 'string'
+        }
+    }, 
+    handler: function (argv) {
+       notes.removeNote(argv.title)
     }
 })
+
 //Create a list command 
 yargs.command ({
     command: 'list',
@@ -42,6 +51,7 @@ yargs.command ({
         console.log('Listing out all notes')
     }
 })
+
 //Create a read command
 yargs.command ({
     command: 'read',
