@@ -14,14 +14,14 @@ const fs = require('fs')
 //JSON parse converts a string into a object, that way you can access the keys. 
 
 
-//Read the file in and getting in our binary data 
-const dataBuffer = fs.readFileSync('1-json.json')
-//Turned that data into a string 
-const dataJSON = dataBuffer.toString()
-//Turned that data into a json object
-const data = JSON.parse(dataJSON)
-//we acessed the title of that data object
-console.log(data.title)
+// //Read the file in and getting in our binary data 
+// const dataBuffer = fs.readFileSync('1-json.json')
+// //Turned that data into a string 
+// const dataJSON = dataBuffer.toString()
+// //Turned that data into a json object
+// const data = JSON.parse(dataJSON)
+// //we acessed the title of that data object
+// console.log(data.title)
 
 const dataBuffer = fs.readFileSync('1-json.json')
 const parseData = JSON.parse(dataBuffer)
@@ -31,5 +31,3 @@ parseData.name = 'Adan'
 
 const stringData = JSON.stringify(parseData)
 fs.writeFileSync('1-json.json', stringData)
-
-//CONNECT THIS TO GIT TO KEEP COMMITING
