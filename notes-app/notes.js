@@ -7,7 +7,17 @@ const addNote = (title, body) => {
     const notes = loadNotes()
     const duplicateNote = notes.find((note) => note.title === title)
 
+    //console.log(duplicateNotes)
+    //use console.log to find out what things equal to if 
+    //they have any value. For debugging
 
+    //debugger
+    //we can add debugger one time and run node inspect app.js 
+
+    //we can look at the error message as well where it says "ReferenceError"
+    //that will show WHAT the error is. 
+    //Down below it it will show WHERE the errror is. 
+      
     if (!duplicateNote) {
         notes.push({
             title: title, 
