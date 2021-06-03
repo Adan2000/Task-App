@@ -26,6 +26,11 @@ yargs.command({
         notes.addNote(argv.title, argv.body)
     }
 })
+//the yargs.commmand for the add, will take in a title and a body. 
+//demandOption was set to true that way it is required to type in --title or --body
+//the type was set to string to take in strings 
+//Last we call in the addNote that comes from the notes constant. 
+//We pass it in the title and body
 
 //Create remove command
 yargs.command({

@@ -52,6 +52,9 @@ const readNote = (title) => {
     }
 }
 
+
+//HELPERS 
+
 const saveNotes = (notes) => {
     const dataJSON = JSON.stringify(notes)
     fs.writeFileSync('notes.json', dataJSON)
@@ -65,9 +68,11 @@ const loadNotes = () => {
     } catch (e) {
         return []
     }
-    //try catch method, if any code inside of try fails it
-    //will stop and run the catch block and in our case 
-    //return a empty array
+    //try catch method, if any code inside of try fails it will stop and run the catch block and in our case 
+    //return a empty array.
+    //We use the readFileSync to get data from the notes.json file 
+    //We then turn that file into a string 
+    //We then turn it into a object. Otherwise we return an empty array.
 }
 
 module.exports = {
