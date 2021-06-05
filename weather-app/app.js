@@ -1,14 +1,8 @@
-console.log('Starting')
+const request = require('request')
 
-setTimeout(() => {
-    console.log('2 second timer')
-}, 2000)
 
-setTimeout(() => {
-    console.log('0 second timer')
-}, 0)
 
-console.log('Stopping')
+
 
 //Call stack. 
 //main function gets pushed to the bottom of the call stack. This starts everything.
@@ -17,3 +11,6 @@ console.log('Stopping')
 //No asyncronous callbacks are ever going to run before our main function is done.
 //Call stack -> Node APIs -> Event Loop -> Call stack
 //Our Event loop cant run any asyncronous call backs until our Call Stack is empty.
+
+//npm -y 
+//this makes it default. 
