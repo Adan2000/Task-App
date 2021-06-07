@@ -7,6 +7,8 @@ const url = 'http://api.weatherstack.com/current?access_key=182566dc91d2ec6fbe9a
 request({ url: url, json: true }, (error, response) => {
     if (error) {
         console.log('Unable to connect to weather service')
+    } else if (response.body.error) {
+        console.log('Unable to find location')
     } else {
     console.log(response.body.current.weather_descriptions[0] + ', It is currently ' + response.body.current.temperature + ' degrees outside. It feels like ' + response.body.current.feelslike + ' degrees out.')
     }
@@ -16,11 +18,13 @@ request({ url: url, json: true }, (error, response) => {
 //Geocoding
 // Address -> Lat/Long -> Weather
 
-const geocodeurl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoiaXN0aGlzYWRhbiIsImEiOiJja3BscGU4N3cwMjVkMnB1ZXc3MnBkMzB3In0.1Bgtj8BGPGofjmhH4oSVEg&limit=1'
+const geocodeurl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los-Angeles.json?access_token=pk.eyJ1IjoiaXN0aGlzYWRhbiIsImEiOiJja3BscGU4N3cwMjVkMnB1ZXc3MnBkMzB3In0.1Bgtj8BGPGofjmhH4oSVEg&limit=1'
 
 request({ url: geocodeurl, json: true }, (error, response) => {
     if (error) {
         console.log('Unable to connect to weather serviec')
+    } else if (response.body.features.length === 0) {
+        console.log('Unable to find location. Try another search')
     } else {
     const latitude = response.body.features[0].center[1]
     const longitude = response.body.features[0].center[0]
