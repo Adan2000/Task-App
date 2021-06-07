@@ -5,7 +5,11 @@ const url = 'http://api.weatherstack.com/current?access_key=182566dc91d2ec6fbe9a
 
 
 request({ url: url, json: true }, (error, response) => {
+    if (error) {
+        console.log('Unable to connect to weather service')
+    } else {
     console.log(response.body.current.weather_descriptions[0] + ', It is currently ' + response.body.current.temperature + ' degrees outside. It feels like ' + response.body.current.feelslike + ' degrees out.')
+    }
 })
 
 
@@ -15,9 +19,13 @@ request({ url: url, json: true }, (error, response) => {
 const geocodeurl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoiaXN0aGlzYWRhbiIsImEiOiJja3BscGU4N3cwMjVkMnB1ZXc3MnBkMzB3In0.1Bgtj8BGPGofjmhH4oSVEg&limit=1'
 
 request({ url: geocodeurl, json: true }, (error, response) => {
+    if (error) {
+        console.log('Unable to connect to weather serviec')
+    } else {
     const latitude = response.body.features[0].center[1]
     const longitude = response.body.features[0].center[0]
     console.log(latitude, longitude)
+    }
 })
 
 
