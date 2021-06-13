@@ -8,8 +8,13 @@ app.set('view engine', 'hbs')
 app.use(express.static(publicDirectoryPath));
 
 app.get('', (req, res) => {
-    res.render('index')
+    res.render('index', {
+        title: 'Weather App',
+        name: 'Adan'
+    })
 })
+
+//handle bars used for dynamic.
 
 app.get("/weather", (req, res) => {
   res.send({
