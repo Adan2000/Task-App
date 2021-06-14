@@ -9,8 +9,22 @@ app.use(express.static(publicDirectoryPath));
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather App',
+        title: 'Weather',
         name: 'Adan'
+    })
+})
+
+app.get('/about', (req, res) => {
+    res.render('about', {
+        title: 'About Me',
+        name: 'Adan'
+
+    })
+})
+
+app.get('/help', (req, res) => {
+    res.render('help', {
+        helptext: 'This is some helpful text.'
     })
 })
 
