@@ -8,11 +8,13 @@ const app = express();
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
+const footerPartial = path.join(__dirname, '../template/partials')
 
 // Setup handlebars engine and views location.
 app.set('view engine', 'hbs')
 app.set('views', viewPath)
 hbs.registerPartials(partialsPath) //partials can be and are used in multiple pages.
+
 
 // Setup static directory to serve.
 app.use(express.static(publicDirectoryPath));
@@ -29,7 +31,6 @@ app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
         name: 'Adan'
-
     })
 })
 
