@@ -21,7 +21,7 @@ app.use(express.static(publicDirectoryPath));
 
 
 app.get('', (req, res) => {
-    res.render('index', {
+    res.render('index', { 
         title: 'Weather',
         name: 'Adan'
     })
@@ -50,6 +50,10 @@ app.get("/weather", (req, res) => {
     location: "Seattle",
   });
 });
+
+app.get('*', (req, res) => {
+  res.send('My 404 page')
+})
 
 app.listen(3000, () => {
   console.log("Server is up on port 3000");
