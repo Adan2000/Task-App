@@ -23,14 +23,14 @@ app.use(express.static(publicDirectoryPath));
 app.get('', (req, res) => {
     res.render('index', { 
         title: 'Weather',
-        name: 'Adan'
+        name: 'Adan Escamilla'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
-        name: 'Adan'
+        name: 'Adan Escamilla'
     })
 })
 
@@ -62,7 +62,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
   res.render('404', {
     title: '404',
-    name: 'Adan',
+    name: 'Adan Escamilla',
     errorMessage: 'Page not found'
   })
 })
