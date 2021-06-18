@@ -44,11 +44,15 @@ app.get('/help', (req, res) => {
 
 //handle bars used for dynamic.
 
-app.get("/weather", (req, res) => {
-  res.send({
-    forcast: "It is raining",
-    location: "Seattle",
-  });
+app.get('/weather', (req, res) => {
+  if(!req.query.address) {
+    return res.send({
+      error: 'You must provide an address'
+    })
+  }
+  res.send ({
+    address: req.query.address
+  })
 });
 
 app.get('/products', (req, res) => {
