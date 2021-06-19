@@ -58,7 +58,7 @@ app.get('/weather', (req, res) => {
     }
     forecast(latitude, longitude, (error, forecastData) => {
       if(error) {
-        return res.send({error})
+        return res.send({ error })
       }
       res.send({
         forecast: forecastData, 
@@ -68,6 +68,10 @@ app.get('/weather', (req, res) => {
     })
   })
 });
+
+//we pass in the address to geocode. (req.query.address)
+//geocode takes in two arguments, the second is our callback function.
+//we either have our error or data as an object, if there is an error. We send back an object with error property.
 
 
 app.get('/products', (req, res) => {
