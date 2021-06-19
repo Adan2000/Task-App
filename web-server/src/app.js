@@ -52,7 +52,7 @@ app.get('/weather', (req, res) => {
       error: 'You must provide an address'
     })
   }
-  geocode(req.query.address, (error, { latitude, longitude, location }) => {
+  geocode(req.query.address, (error, { latitude, longitude, location } = {}) => {
     if (error) {
       return res.send({ error })
     }
@@ -72,7 +72,8 @@ app.get('/weather', (req, res) => {
 //we pass in the address to geocode. (req.query.address)
 //geocode takes in two arguments, the second is our callback function.
 //we either have our error or data as an object, if there is an error. We send back an object with error property.
-
+//we then call forcast. passing in the 3 arguments, 
+//we send back the forcast, location, and address.
 
 app.get('/products', (req, res) => {
   if (!req.query.search) {
