@@ -20,7 +20,12 @@ fetch(url)
             }
         })
     })
-
 //Fetch JSON data from a URL.
 //Parse it into a JS object.
 //Console log that data
+
+const weatherForm = document.querySelector('form')
+
+weatherForm.addEventListener('submit', () => {
+    console.log('Testing')
+})
