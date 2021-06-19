@@ -1,15 +1,17 @@
 console.log('Client side')
 
-fetch('http://puzzle.mead.io/puzzle')
-    .then((response) => {
-        response.json().then((data) =>{
-            console.log(data)
-        })
-})
 
-const url = 'http://localhost:3000/weather?address=boston'
 
-fetch(url)
+
+const weatherForm = document.querySelector('form')
+const search = document.querySelector('input')
+
+weatherForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const location = search.value
+    
+    fetch('http://localhost:3000/weather?address=' + location)
     .then((response) => {
         response.json().then((data) => {
             if(data.error) {
@@ -20,12 +22,4 @@ fetch(url)
             }
         })
     })
-//Fetch JSON data from a URL.
-//Parse it into a JS object.
-//Console log that data
-
-const weatherForm = document.querySelector('form')
-
-weatherForm.addEventListener('submit', () => {
-    console.log('Testing')
 })
