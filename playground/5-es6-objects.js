@@ -31,8 +31,8 @@ const { productLabel, stock, price, salePrice, rating = 5 } = product
 // console.log(salePrice)
 // console.log(rating)
 
-const transaction = (type, { label, stock } ) => {
+const transaction = (type, { label, stock } = {} ) => {
     console.log(type, label, stock)
 }
-
+//by using a = {} we set up a default value.
 transaction('order', product)
