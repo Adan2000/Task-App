@@ -53,3 +53,15 @@ button {
     color: white;
     padding: 8px;
 }
+
+a:hover {
+  color:green;  
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a {
+    color: blue;
+}
