@@ -70,3 +70,11 @@ a:link {
     color: white;
     padding: 8px;
 }
+ .two {
+    color: blue;
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+ }
