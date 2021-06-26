@@ -109,3 +109,5 @@ app.listen(3000, () => {
 //nodemon src/app.js
 //Listens to changes
 // CMD -> SHIFT -> P (Format file)
+
+//testing if git add works.
