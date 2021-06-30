@@ -10,3 +10,11 @@ NoSQL Database ex.
 
 Document Collection Field 
 
+[
+    {
+        "id": "21"
+        "name": "Adan"
+        "email": "isc23@gmail.com"
+        "password": "pass123"
+    }
+]
