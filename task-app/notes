@@ -26,3 +26,6 @@ Structure, Storage, Scale, Access
 Structure
 -Tables (rows and columns) Primary key, Attribute, Foreign Key.
 -Constraints, Relations.
+
+Storage
+-Concentrated, 1 copy of entire data
