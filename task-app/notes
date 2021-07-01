@@ -38,3 +38,7 @@ Access
 -RAW SQL 
 -Direct Database
 -Object Relational mappers
+
+NoSQL - Anything that is non-Relational 
+Many implementations.. Table, Document, Graph 
+Built with a high performance, but queries are less flexible.
