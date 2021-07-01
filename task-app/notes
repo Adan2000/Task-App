@@ -33,3 +33,8 @@ Storage
 Scale
 -Vertical(better machine)
 -Horizontal(more machines)
+
+Access 
+-RAW SQL 
+-Direct Database
+-Object Relational mappers
