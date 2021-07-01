@@ -55,4 +55,6 @@ Scale
 -Add more partitions.
 -allow those to scale individually.
 
-
+Access
+-REST Apis
+-CRUD in Vendor specific lang. 
