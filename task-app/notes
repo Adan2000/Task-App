@@ -42,3 +42,7 @@ Access
 NoSQL - Anything that is non-Relational 
 Many implementations.. Table, Document, Graph 
 Built with a high performance, but queries are less flexible.
+
+Structure
+-Table, Document, Graph.
+-Key value stores. Know the key that you are looking for.
