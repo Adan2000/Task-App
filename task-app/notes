@@ -28,4 +28,8 @@ Structure
 -Constraints, Relations.
 
 Storage
--Concentrated, 1 copy of entire data
+-Concentrated, a node with 1 copy of entire data
+
+Scale
+-Vertical(better machine)
+-Horizontal(more machines)
