@@ -22,3 +22,7 @@ Document Collection Field
 SQL - Structured Query Language, CRUD operations. 
 MySQL, PostGres, SQL
 Structure, Storage, Scale, Access
+
+Structure
+-Tables (rows and columns) Primary key, Attribute, Foreign Key.
+-Constraints, Relations.
