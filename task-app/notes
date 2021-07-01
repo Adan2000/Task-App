@@ -49,4 +49,10 @@ Structure
 
 Storage
 -Hashing Input.f(x)
--Value is distributed
+-Value is distributed. 
+
+Scale
+-Add more partitions.
+-allow those to scale individually.
+
+
