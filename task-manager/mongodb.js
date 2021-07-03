@@ -21,4 +21,14 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
     //     }
     //     console.log(result.ops)
     // })
+    db.collection('Users').insertMany([
+        {
+            name: 'Jen',
+            age: '23'
+        }, {
+            name: 'Oscar',
+            age: 20
+        }
+    ], (error, result) => {})
+
 })
