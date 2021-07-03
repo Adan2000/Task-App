@@ -29,6 +29,11 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
             name: 'Oscar',
             age: 20
         }
-    ], (error, result) => {})
+    ], (error, result) => {
+        if (error) {
+            return console.log('Unable to insert docs')
+        } 
+        console.log(result.ops)
+    })
 
 })
