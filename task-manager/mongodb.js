@@ -35,5 +35,17 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
     //     } 
     //     console.log(result.ops)
     // })
+    db.collection('Tasks').insertMany([
+        {
+            description: 'Clean the house',
+            completed: true
+        }, {
+            description: 'Renew inspection',
+            completed: false
+        }, {
+            description: 'Commit',
+            completed: false
+        }
+    ])
 
 })
