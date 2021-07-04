@@ -2,6 +2,7 @@
 
 const mongodb = require('mongodb')
 const MongoClient = mongodb.MongoClient
+const ObjectID = mongodb.ObjectID
 
 const connectionURL = 'mongodb://localhost:27017'
 const databaseName = 'task-manager'
