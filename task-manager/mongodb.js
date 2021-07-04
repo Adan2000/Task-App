@@ -10,6 +10,7 @@ const connectionURL = 'mongodb://localhost:27017'
 const databaseName = 'task-manager'
 
 const id = new ObjectID()
+console.log(id)
 
 MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: true}, (error, client) => {
     if (error) {
@@ -57,4 +58,4 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 //         } console.log(result.ops)
 //     })
 
-// })
+})
