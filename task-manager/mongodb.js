@@ -22,4 +22,6 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         console.log(user)
     })
 
+    db.collection('Users').find({ age: 23 })
+
 })
