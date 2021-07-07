@@ -3,3 +3,7 @@ const doWorkPromise = new Promise((resolve, reject) => {
         resolve([7,4,1])
     }, 2000)
 })
+
+doWorkPromise.then((result) => {
+
+})
