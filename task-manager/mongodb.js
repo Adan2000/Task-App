@@ -15,7 +15,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
     }
     const db = client.db(databaseName)
 
-    db.collection('Users').updateOne({
+    const updatePromise = db.collection('Users').updateOne({
         _id: new ObjectID("60dfeddb9911602cc1418866")
     }, {
         $set: {
@@ -23,5 +23,9 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         }
     })
 
-
+    updatePromise.then((result) => {
+        console.log(result)
+    }).catch((error) => {
+        console.log(error)
+    })
 })
