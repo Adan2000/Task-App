@@ -17,6 +17,10 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
     db.collection('Users').updateOne({
         _id: new ObjectID("60dfeddb9911602cc1418866")
+    }, {
+        $set: {
+            name: 'Mike'
+        }
     })
 
 
