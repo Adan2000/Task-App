@@ -15,15 +15,15 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
     }
     const db = client.db(databaseName)
 
-    db.collection('Users').updateOne({
-        _id: new ObjectID("60dfeddb9911602cc1418866")
-    }, {
-        $inc: {
-            age: 20
-        }
-    }).then((result) => {
-        console.log(result)
-    }).catch((error) => {
-        console.log(error)
-    })
+    // db.collection('Users').updateOne({
+    //     _id: new ObjectID("60dfeddb9911602cc1418866")
+    // }, {
+    //     $inc: {
+    //         age: 20
+    //     }
+    // }).then((result) => {
+    //     console.log(result)
+    // }).catch((error) => {
+    //     console.log(error)
+    // })
 })
