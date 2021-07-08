@@ -26,4 +26,11 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
     // }).catch((error) => {
     //     console.log(error)
     // })
+    db.collection('Tasks').updateMany({
+        completed: false
+    }, {
+        $set: {
+            completed: true
+        }
+    })
 })
