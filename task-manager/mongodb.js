@@ -23,6 +23,14 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         console.log(error)
     })
 
+    db.collection('Tasks').deleteOne({
+        desription: 'Commit'
+    }).then((result) => {
+        console.log(result)
+    }).catch((error) => {
+        console.log(error)
+    })
+
     // db.collection('Users').updateOne({
     //     _id: new ObjectID("60dfeddb9911602cc1418866")
     // }, {
