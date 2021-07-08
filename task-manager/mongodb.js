@@ -15,6 +15,9 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
     }
     const db = client.db(databaseName)
 
+    db.collection('Users').updateOne({
+        _id: new ObjectID("60dfeddb9911602cc1418866")
+    })
 
 
 })
