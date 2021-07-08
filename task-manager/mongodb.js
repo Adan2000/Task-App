@@ -15,22 +15,6 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
     }
     const db = client.db(databaseName)
 
-    // db.collection('Users').findOne({ _id: new ObjectID('60dfeddb9911602cc1418867')}, (error, user) => {
-    //     if (error) {
-    //         return console.log('Unable to find user')
-    //     } 
-    //     console.log(user)
-    // })
 
-    // db.collection('Users').find({ age: 23 }).toArray((error, users) => {
-    //     console.log(users)
-    // })
-     
-    db.collection('Tasks').findOne({ _id: new ObjectID("60dfef5598311a2dd44448e5")}, (error, task) => {
-        console.log(task)
-    })
-    db.collection('Tasks').find({ completed: false}).toArray((error, task) => {
-        console.log(task)
-    })
 
 })
