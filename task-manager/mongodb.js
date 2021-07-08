@@ -32,5 +32,9 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         $set: {
             completed: true
         }
+    }).then((result) => {
+        console.log(result)
+    }).catch(() => {
+        console.log(error)
     })
 })
