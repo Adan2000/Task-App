@@ -24,7 +24,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
     })
 
     db.collection('Tasks').deleteOne({
-        desription: 'Commit'
+        description: "Commit"
     }).then((result) => {
         console.log(result)
     }).catch((error) => {
