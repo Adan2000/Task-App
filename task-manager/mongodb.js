@@ -17,6 +17,10 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
 
     db.collection('Users').deleteMany({
         age: 20
+    }).then((result) => {
+        console.log(result)
+    }).catch((error) => {
+        console.log(error)
     })
 
     // db.collection('Users').updateOne({
