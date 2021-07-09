@@ -18,3 +18,9 @@ const me = new User({
     name: 'Adan',
     age: 21
 })
+
+me.save().then(() => {
+    console.log(me)
+}).catch((e) => {
+    console.log('Error', e)
+})
