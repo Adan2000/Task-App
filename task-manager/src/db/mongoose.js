@@ -19,6 +19,7 @@ const me = new User({
     name: 'Adan',
     age: '21'
 })
+//we then make a new consant with the following name and age in a object
 
 me.save().then(() => {
     console.log(me)
