@@ -26,4 +26,4 @@ me.save().then(() => {
 }).catch((e) => {
     console.log('Error', e)
 })
-//we then save it and use the .then to log the object
+
