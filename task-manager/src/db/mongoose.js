@@ -13,7 +13,7 @@ const User = mongoose.model('User', {
         type: Number
     }
 })
-//here we define model and its properties in objects
+
 
 const me = new User({
     name: 'Adan',
