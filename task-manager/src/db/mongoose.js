@@ -24,6 +24,11 @@ const Task = mongoose.model('Task', {
     }
 })
 
+const newTask = new Task({
+    description: 'Work on project',
+    completed: true 
+})
+
 const me = new User({
     name: 'Adan',
     age: '21'
