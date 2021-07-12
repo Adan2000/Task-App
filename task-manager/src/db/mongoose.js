@@ -25,6 +25,3 @@ newTask.save().then(() => {
     console.log('Error', e)
 })
 
-
-
-//will be coming back
