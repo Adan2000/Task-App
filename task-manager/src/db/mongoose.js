@@ -15,6 +15,15 @@ const User = mongoose.model('User', {
 })
 
 
+const Task = mongoose.model('Task', {
+    description: {
+        type: String
+    }, 
+    completed: {
+        type: Boolean
+    }
+})
+
 const me = new User({
     name: 'Adan',
     age: '21'
