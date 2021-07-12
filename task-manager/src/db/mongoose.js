@@ -35,8 +35,8 @@ const User = mongoose.model('User', {
 })
 
 const me = new User({
-    name: 'Mike',
-    email: 'mike@'
+    name: '    Adan',
+    email: 'MYEMAIL@MEAD.IO'
 })
 
 me.save().then(() => {
