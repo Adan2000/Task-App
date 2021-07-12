@@ -15,6 +15,16 @@ const User = mongoose.model('User', {
     }
 })
 
+const me = new User({
+    name: 'Mike'
+})
+
+me.save().then(() => {
+    console.log(me)
+}).catch((e) => {
+    console.log('Error', e)
+})
+
 // const Task = mongoose.model('Task', {
 //     description: {
 //         type: String
