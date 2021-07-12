@@ -5,6 +5,16 @@ mongoose.connect('mongodb://localhost:27017/task-manager-api', {
     useCreateIndex: true
 })
 
+const User = mongoose.model('User', {
+    name: {
+        type: String,
+        required: true
+    },
+    age: {
+        type: Number
+    }
+})
+
 // const Task = mongoose.model('Task', {
 //     description: {
 //         type: String
