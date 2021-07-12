@@ -29,6 +29,12 @@ const newTask = new Task({
     completed: true 
 })
 
+newTask.save().then(() => {
+    console.log(newTask)
+}).catch((e) => {
+    console.log('Error', e)
+})
+
 const me = new User({
     name: 'Adan',
     age: '21'
