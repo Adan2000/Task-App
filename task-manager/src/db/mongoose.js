@@ -32,7 +32,7 @@ const User = mongoose.model('User', {
 
 const me = new User({
     name: 'Mike',
-    age: -1
+    email: 'mike@'
 })
 
 me.save().then(() => {
