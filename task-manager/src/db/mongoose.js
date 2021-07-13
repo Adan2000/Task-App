@@ -23,6 +23,17 @@ const User = mongoose.model('User', {
             }
         }
     },
+    passwird: {
+        type: String, 
+        required: true,
+        minlength: 7,
+        trim: true,
+        validator(value){
+            if(value.includes('password')) {
+                throw new Error('Password cannot contain "password"')
+            }
+        }
+    },
     age: {
         type: Number,
         default: 0,
