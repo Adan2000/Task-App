@@ -23,13 +23,13 @@ const User = mongoose.model('User', {
             }
         }
     },
-    passwird: {
+    password: {
         type: String, 
         required: true,
         minlength: 7,
         trim: true,
         validator(value){
-            if(value.includes('password')) {
+            if(value.toLowerCase().includes('password')) {
                 throw new Error('Password cannot contain "password"')
             }
         }
